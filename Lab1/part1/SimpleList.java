@@ -7,7 +7,7 @@ class SimpleList
    {
       List<Integer> newValues = new LinkedList<Integer>();
 
-      for(Integer i: values) newValues.add(i);
+      for(Integer i: values) newValues.add((int)Math.pow(i,2));
 
       return newValues;
    }
