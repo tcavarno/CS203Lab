@@ -41,8 +41,8 @@ public class TestCases
    @Test
    public void testRotate()
    {
-      assertEquals(-2.0, new Point(1.0, 2.0).rotate90().getX, DELTA);
-      assertEquals(1, new Point(1.0, 2.0).rotate90().getY, DELTA);
+      assertEquals(-2.0, new Point(1.0, 2.0).rotate90().getX(), DELTA);
+      assertEquals(1, new Point(1.0, 2.0).rotate90().getY(), DELTA);
    }
 
    /*
