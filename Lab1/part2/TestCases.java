@@ -48,8 +48,8 @@ public class TestCases
    @Test
    public void testAngle()
    {
-      assertEquals(45.0, new Point(2.0, 2.0).getAngle(), DELTA);
-      assertEquals(30.0, new Point(3.0, Math.pow(3,.5)).getAngle(), DELTA);
+      assertAlmostEquals(.78, new Point(2.0, 2.0).getAngle(), DELTA);
+      assertAlmostEquals(.52, new Point(3.0, Math.pow(3,.5)).getAngle(), DELTA);
    
    }
 
