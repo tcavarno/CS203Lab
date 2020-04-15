@@ -50,6 +50,8 @@ public class TestCases
    {
       assertEquals(0.7853981633974483, new Point(2.0, 2.0).getAngle(), DELTA);
       assertEquals(.52359, new Point(3.0, Math.pow(3,.5)).getAngle(), DELTA);
+      assertEquals(2.35619449, new Point(-2.0, 2.0).getAngle(), DELTA);
+      assertEquals(0, new Point(3, 0).getAngle(), DELTA);
    
    }
 
