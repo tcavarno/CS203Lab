@@ -15,7 +15,7 @@ public class Point{
         return Math.pow(Math.pow(this.x,2) + Math.pow(this.y,2),.5);
     }
     public double getAngle(){
-        return Math.tanh(this.y/this.x)
+        return Math.tanh(this.y/this.x);
     }
 
     public Point rotate90(){
