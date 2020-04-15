@@ -90,11 +90,6 @@ public class TestCases
    { 
       assertEquals(-0.7853981633974483, new Point(2.0, -2.0).getAngle(), DELTA);
    }
-   @Test
-   public void testAngle9()
-   { 
-      assertEquals(-0.7853981633974483, new Point(3, -1).getAngle(), DELTA);
-   }
 
    /*
     * The tests below here are to verify the basic requirements regarding
