@@ -23,12 +23,11 @@ public class Point{
         if (x == 0 && !yDir) return 3*Math.PI/2.0;
         if (y == 0 && xDir) return 0.0;
         if (y == 0 && !xDir) return Math.PI;
-        if (xDir && yDir) return Math.atan(this.y/this.x);
         if (!xDir && yDir) return Math.PI - Math.atan(this.y/(-1*this.x));
         if (!xDir && !yDir) return Math.PI + Math.atan((-1*this.y)/(-1*this.x));
         if (xDir && !yDir) return 2*Math.PI - Math.atan((-1*this.y)/this.x);
-
-        Assert(true);
+        
+        return Math.atan(this.y/this.x);
     }
 
     public Point rotate90(){
