@@ -74,8 +74,8 @@ public class TestCases
    public void testSimpleArray3()
    {
       assertArrayEquals(
-         new int[] {1,2,3,4,5,6},
-         SimpleArray.squareAll(new int[] {1,4,8,16,25,36}));
+         new int[] {1,4,8,16,25,36},
+         SimpleArray.squareAll(new int[] {1,2,3,4,5,6}));
    }
 
    @Test
