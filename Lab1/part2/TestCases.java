@@ -25,6 +25,25 @@ public class TestCases
    {
       assertEquals(1.0, new Point(1.0, 2.0).getX(), DELTA);
    }
+   
+   @Test
+   public void testGetY()
+   {
+      assertEquals(2.0, new Point(1.0, 2.0).getY(), DELTA);
+   }
+
+   @Test
+   public void testRadius()
+   {
+      assertEquals(5.0, new Point(3.0, 4.0).getRadius(), DELTA);
+   }
+
+   @Test
+   public void testRotate()
+   {
+      assertEquals(-2.0, new Point(1.0, 2.0).rotate90().getX, DELTA);
+      assertEquals(1, new Point(1.0, 2.0).rotate90().getY, DELTA);
+   }
 
    /*
     * The tests below here are to verify the basic requirements regarding
