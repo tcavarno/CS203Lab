@@ -45,6 +45,14 @@ public class TestCases
       assertEquals(1, new Point(1.0, 2.0).rotate90().getY(), DELTA);
    }
 
+   @Test
+   public void testAngle()
+   {
+      assertEquals(45.0, new Point(2.0, 2.0).getAngle(), DELTA);
+      assertEquals(30.0, new Point(3.0, Math.pow(3,.5)).getAngle(), DELTA);
+   
+   }
+
    /*
     * The tests below here are to verify the basic requirements regarding
     * the "design" of your class.  These are to remain unchanged.
