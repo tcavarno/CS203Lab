@@ -1,4 +1,3 @@
-import sun.jvm.hotspot.utilities.Assert;
 
 public class Point{
     double x;
@@ -26,7 +25,7 @@ public class Point{
         if (!xDir && yDir) return Math.PI - Math.atan(this.y/(-1*this.x));
         if (!xDir && !yDir) return Math.PI + Math.atan((-1*this.y)/(-1*this.x));
         if (xDir && !yDir) return 2*Math.PI - Math.atan((-1*this.y)/this.x);
-        
+
         return Math.atan(this.y/this.x);
     }
 
