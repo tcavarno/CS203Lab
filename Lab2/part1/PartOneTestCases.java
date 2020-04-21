@@ -4,6 +4,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.Arrays;
 import java.util.List;
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
@@ -115,4 +116,87 @@ public class PartOneTestCases
          assertEquals(expectedMethodReturns.get(i), method.getReturnType());
       }
    }
+
+   @Test
+   public void testCirlce()
+   {
+      Circle circle = new Circle(new Point(0,0) , 3.0);
+      assertEquals(3.0, circle.getRadius(), DELTA);
+
+      assertEquals(0.0 , circle.getCenter().getX(), DELTA);
+      assertEquals(0.0 , circle.getCenter().getY(), DELTA);
+
+   }
+
+   @Test
+   public void testRectangle()
+   {
+      Rectangle rectangle = new Rectangle(new Point(0,3), new Point(3,3));
+      assertEquals(0.0, rectangle.getTopLeft().getX(), DELTA);
+      assertEquals(3.0, rectangle.getTopLeft().getY(), DELTA);
+      assertEquals(3.0 , rectangle.getBottomRight().getX(), DELTA);
+      assertEquals(3.0 , rectangle.getBottomRight().getY(), DELTA);
+
+   }
+
+   @Test
+   public void testPolygon()
+   {
+      List<Point> inputPoints = new ArrayList<Point>();
+      inputPoints.add(new Point(0,0));
+      inputPoints.add(new Point(3,4));
+      inputPoints.add(new Point(4,0));
+
+      Polygon polygon = new Polygon(inputPoints);
+      assertEquals(inputPoints, polygon.getPoints());
+   }
+
+   @Test
+   public void testPerimPoly() {
+        List<Point> points = new ArrayList<Point>(); 
+        points.add(new Point(0, 0));
+        points.add(new Point(3,0));
+        points.add(new Point(0,4));
+        double d = Util.perimeter(new Polygon(points));
+        assertEquals(12.0, d, DELTA);
+   }
+
+   @Test
+   public void testPerimRec() {
+        Point top = new Point(0,4);
+        Point bottom = new Point(4, 0);
+        Rectangle r = new Rectangle(top,bottom);
+        double d = Util.perimeter(r);
+        assertEquals(16.0, d, DELTA);
+   }
+   @Test
+   public void testPerimCir() {
+        Point center = new Point(0,0);
+        double radius = .5;
+
+        double d = Util.perimeter(new Circle(center,radius));
+        assertEquals(Math.PI, d, DELTA);
+   }
+   @Test
+   public void testBigger() {
+        Point center = new Point(0,0);
+        double radius = .5;
+        Circle c = new Circle(center,radius);
+        
+        Point top = new Point(0,4);
+        Point bottom = new Point(4, 0);
+        Rectangle r = new Rectangle(top,bottom);
+
+        List<Point> points = new ArrayList<Point>(); 
+        points.add(new Point(0, 0));
+        points.add(new Point(3,0));
+        points.add(new Point(0,4));
+        Polygon p = new Polygon(points);
+
+
+        assertEquals(16.0, bigger.whichIsBigger(c,r,p), DELTA);
+   }
+
+
+
 }

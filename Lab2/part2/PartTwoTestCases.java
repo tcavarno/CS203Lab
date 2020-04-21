@@ -4,6 +4,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.Arrays;
 import java.util.List;
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
@@ -95,5 +96,63 @@ public class PartTwoTestCases
             expectedMethodParameters.get(i));
          assertEquals(expectedMethodReturns.get(i), method.getReturnType());
       }
+   }
+
+   @Test
+   public void testPolygon()
+   {
+      List<Point> inputPoints = new ArrayList<Point>();
+      inputPoints.add(new Point(0,0));
+      inputPoints.add(new Point(3,4));
+      inputPoints.add(new Point(4,0));
+
+      Polygon polygon = new Polygon(inputPoints);
+      assertEquals(inputPoints, polygon.getPoints());
+   }
+
+   @Test
+   public void testPerimPoly() {
+        List<Point> points = new ArrayList<Point>(); 
+        points.add(new Point(0, 0));
+        points.add(new Point(3,0));
+        points.add(new Point(0,4));
+        double d = new Polygon(points).perimeter();
+        assertEquals(12.0, d, DELTA);
+   }
+
+   @Test
+   public void testPerimRec() {
+        Point top = new Point(0,4);
+        Point bottom = new Point(4, 0);
+        Rectangle r = new Rectangle(top,bottom);
+        double d = r.perimeter();
+        assertEquals(16.0, d, DELTA);
+   }
+   @Test
+   public void testPerimCir() {
+        Point center = new Point(0,0);
+        double radius = .5;
+
+        double d = new Circle(center,radius).perimeter();
+        assertEquals(Math.PI, d, DELTA);
+   }
+   @Test
+   public void testBigger() {
+        Point center = new Point(0,0);
+        double radius = .5;
+        Circle c = new Circle(center,radius);
+        
+        Point top = new Point(0,4);
+        Point bottom = new Point(4, 0);
+        Rectangle r = new Rectangle(top,bottom);
+
+        List<Point> points = new ArrayList<Point>(); 
+        points.add(new Point(0, 0));
+        points.add(new Point(3,0));
+        points.add(new Point(0,4));
+        Polygon p = new Polygon(points);
+
+
+        assertEquals(16.0, bigger.whichIsBigger(c,r,p), DELTA);
    }
 }

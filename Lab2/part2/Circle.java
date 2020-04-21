@@ -16,6 +16,10 @@ public class Circle
         return this.radius;
     }
 
+    public double perimeter(){
+        return Math.PI*this.radius*2;
+}
+
 
 
 }

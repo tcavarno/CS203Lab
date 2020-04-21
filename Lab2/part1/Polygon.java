@@ -7,7 +7,7 @@ public class Polygon{
         this.pointList=pointList;
     }
 
-    public List<Point> getPointList(){
+    public List<Point> getPoints(){
         return this.pointList;
     }
 }
