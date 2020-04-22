@@ -1,4 +1,4 @@
-public class bigger{
+public class Bigger{
     public static double whichIsBigger(Circle c, Rectangle r, Polygon p){
         if (Util.perimeter(c) > Util.perimeter(r) && Util.perimeter(c) > Util.perimeter(p)){
             return Util.perimeter(c);
