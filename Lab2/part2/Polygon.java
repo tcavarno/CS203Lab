@@ -24,7 +24,7 @@ public class Polygon{
         double x2 = this.pointList.get(this.pointList.size()-1).getX();
         double y1 = this.pointList.get(0).getY();
         double y2 = this.pointList.get(this.pointList.size()-1).getY();
-        return perimeter + distanceFormula(x1,x2,y1,y2);
+        return perimeter + distanceFormula(x1,y1,x2,y2);
         
     }
     private double distanceFormula(double x1, double y1,double x2,double y2){

@@ -26,7 +26,7 @@ public class Util{
         double x2 = polygon.getPoints().get(polygon.getPoints().size()-1).getX();
         double y1 = polygon.getPoints().get(0).getY();
         double y2 = polygon.getPoints().get(polygon.getPoints().size()-1).getY();
-        return perimeter + distanceFormula(x1,x2,y1,y2);
+        return perimeter + distanceFormula(x1,y1,x2,y2);
         
     }
     private static double distanceFormula(double x1, double y1,double x2,double y2){

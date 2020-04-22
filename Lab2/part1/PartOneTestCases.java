@@ -183,18 +183,19 @@ public class PartOneTestCases
         double radius = .5;
         Circle c = new Circle(center,radius);
         
-        Point top = new Point(0,4);
-        Point bottom = new Point(4, 0);
+        Point top = new Point(0,4.1);
+        Point bottom = new Point(4, 0.1);
         Rectangle r = new Rectangle(top,bottom);
 
         List<Point> points = new ArrayList<Point>(); 
         points.add(new Point(0, 0));
-        points.add(new Point(3,0));
-        points.add(new Point(0,4));
+        points.add(new Point(0,4.1));
+        points.add(new Point(4.1,4.1));
+        points.add(new Point(4.1,0));
         Polygon p = new Polygon(points);
 
 
-        assertEquals(16.0, Bigger.whichIsBigger(c,r,p), DELTA);
+        assertEquals(16.4, Bigger.whichIsBigger(c,r,p), DELTA);
    }
 
 
