@@ -194,7 +194,7 @@ public class PartOneTestCases
         Polygon p = new Polygon(points);
 
 
-        assertEquals(16.0, bigger.whichIsBigger(c,r,p), DELTA);
+        assertEquals(16.0, Bigger.whichIsBigger(c,r,p), DELTA);
    }
 
 
