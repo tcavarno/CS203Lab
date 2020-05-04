@@ -28,7 +28,14 @@ class Triangle implements Shape {
     
     public boolean equals(Object other) {
         if (other == null) return false;
-        else if (other.getClass() == this.getClass()) return true;
+        else if (other.getClass() == this.getClass()) {
+            if(this.a.equals(((Triangle) other).a) &&
+               this.b.equals(((Triangle) other).b) &&
+               this.c.equals(((Triangle) other).c) &&
+               this.color == ((Triangle) other).color) 
+               return true;
+            else return false;
+        }
         return false;
     }
    

@@ -50,7 +50,10 @@ class Circle implements Shape {
             return false;
         }
         else if(other.getClass() == this.getClass()){
-            return true;
+            if (this.center.equals(((Circle)other).center) &&
+                this.radius == ((Circle) other).radius &&
+                this.color == ((Circle) other).color)
+                return true;
         }
         return false;
     }

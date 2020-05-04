@@ -35,7 +35,14 @@ class Rectangle implements Shape {
     }   
     public boolean equals(Object other){
         if(other == null) return false;
-        else if(other.getClass() == this.getClass()) return true;
+        else if(other.getClass() == this.getClass()){
+            if (this.topLeft == ((Rectangle) other).topLeft &&
+                this.width == ((Rectangle) other).width &&
+                this.height == ((Rectangle) other).height &&
+                this.color == ((Rectangle) other).color)
+                return true;
+            else return false;
+        }
         return false;
     }
 
