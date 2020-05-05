@@ -69,11 +69,7 @@ class Rectangle implements Shape {
 
     }
     
-    public static void main(String[] args){
-        Rectangle r = new Rectangle(10.0,10.0,new Point(1,1), Color.BLACK);
-        Rectangle r2 = new Rectangle(10.0,10.0, new Point(1,1), Color.BLACK);
-        System.out.println(r.equals(r2));
-    }
+
 
     
 }
