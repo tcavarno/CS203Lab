@@ -51,9 +51,9 @@ class Triangle implements Shape {
 
      
     public double getArea() {
-        return (this.a.getX()*(Math.abs(this.b.getY() - this.c.getY())) + 
-                this.b.getX()*(Math.abs(this.c.getY() - this.a.getY())) + 
-                this.c.getX()*(Math.abs(this.b.getY() - this.a.getY())))/2;
+        return Math.abs(this.a.getX()*(this.b.getY() - this.c.getY()) + 
+                this.b.getX()*(this.c.getY() - this.a.getY()) + 
+                this.c.getX()*(this.b.getY() - this.a.getY()))/2;
     }
 
      
