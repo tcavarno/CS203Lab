@@ -40,8 +40,7 @@ class Rectangle implements Shape {
             boolean b = this.width == ((Rectangle) other).width; 
             boolean c = this.height == ((Rectangle) other).height;
             boolean d = this.color == ((Rectangle) other).color;
-            if (a && b && c && d) return true;
-            else return false;
+            return (a && b && c && d);
         }
         return false;
     }
