@@ -16,6 +16,8 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 import org.junit.Test;
 
+import jdk.jfr.Timestamp;
+
 public class TestCases
 {
    public static final double DELTA = 0.00001;
@@ -36,6 +38,13 @@ public class TestCases
       Circle c = new Circle(5.678, new Point(2, 3), Color.BLACK);
 
       assertEquals(35.6759261, c.getPerimeter(), DELTA);
+   }
+
+   @Test
+   public void testTriangleEquals(){
+      Rectangle r = new Rectangle(10.0,10.0,new Point(1,1), Color.BLACK);
+      Rectangle r2 = new Rectangle(10.0,10.0, new Point(1,1), Color.BLACK);
+      assertEquals(true, r.equals(r2));
    }
 
    @Test

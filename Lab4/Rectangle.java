@@ -36,11 +36,11 @@ class Rectangle implements Shape {
     public boolean equals(Object other){
         if(other == null) return false;
         else if(other.getClass() == this.getClass()){
-            if (this.topLeft == ((Rectangle) other).topLeft &&
-                this.width == ((Rectangle) other).width &&
-                this.height == ((Rectangle) other).height &&
-                this.color == ((Rectangle) other).color)
-                return true;
+            boolean a = this.topLeft.equals(((Rectangle) other).topLeft); 
+            boolean b = this.width == ((Rectangle) other).width; 
+            boolean c = this.height == ((Rectangle) other).height;
+            boolean d = this.color == ((Rectangle) other).color;
+            if (a && b && c && d) return true;
             else return false;
         }
         return false;
@@ -69,7 +69,12 @@ class Rectangle implements Shape {
         this.topLeft = new Point( (int)(this.topLeft.getX()+p.getX()), (int)(this.topLeft.getY() +p.getY()));
 
     }
-
+    
+    public static void main(String[] args){
+        Rectangle r = new Rectangle(10.0,10.0,new Point(1,1), Color.BLACK);
+        Rectangle r2 = new Rectangle(10.0,10.0, new Point(1,1), Color.BLACK);
+        System.out.println(r.equals(r2));
+    }
 
     
 }
