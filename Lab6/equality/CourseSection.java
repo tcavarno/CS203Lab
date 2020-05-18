@@ -46,15 +46,15 @@ class CourseSection
    public int hashCode(){
       int hash = 1;
    
-      hash= hash * 31+ prefix== null ? 0 : prefix.hashCode();
+      hash= hash * 31 + (this.prefix == null ? 0 : this.prefix.hashCode());
 
-      hash= hash * 31+ number == null ? 0 : number.hashCode();
+      hash= hash * 31 + (this.number == null ? 0 : this.number.hashCode());
 
-      hash= hash * 31+((Integer)enrollment).hashCode();
+      hash= hash * 31 + ((Integer)enrollment).hashCode();
      
-      hash= hash * 31 + (startTime == null ? 0 : startTime.hashCode());
+      hash= hash * 31 + (this.startTime == null ? 0 : startTime.hashCode());
 
-      hash= hash * 31+ (endTime == null ? 0 : endTime.hashCode());
+      hash= hash * 31 + (this.endTime == null ? 0 : endTime.hashCode());
 
       return hash;
    }

@@ -35,6 +35,12 @@ public class TestCases
 
       assertTrue(onE.equals(Two));
       assertTrue(Two.equals(onE));
+
+      final CourseSection three = new CourseSection(null, "203", 35,
+         LocalTime.of(9, 40), LocalTime.of(11, 0));
+      final CourseSection four = new CourseSection(null, "203", 35,
+         LocalTime.of(9, 40), LocalTime.of(11, 0));
+      assertEquals(three.hashCode(),four.hashCode(),.0001);
    }
 
    @Test
