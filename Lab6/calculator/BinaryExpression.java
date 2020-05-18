@@ -1,5 +1,5 @@
 
-public abstract class BinaryExpression{
+public abstract class BinaryExpression implements Expression {
     private final Expression lft;
     private final Expression rht;
     private final String opperator;

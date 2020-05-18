@@ -1,4 +1,4 @@
-class MultiplyExpression extends BinaryExpression implements Expression 
+class MultiplyExpression extends BinaryExpression
 {
 
 

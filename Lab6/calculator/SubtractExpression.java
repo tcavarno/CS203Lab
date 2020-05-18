@@ -1,4 +1,4 @@
-class SubtractExpression extends BinaryExpression implements Expression 
+class SubtractExpression extends BinaryExpression
 {
 
 

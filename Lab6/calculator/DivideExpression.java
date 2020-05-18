@@ -1,4 +1,4 @@
-class DivideExpression extends BinaryExpression implements Expression
+class DivideExpression extends BinaryExpression
 {
 
    public DivideExpression(final Expression lft, final Expression rht)

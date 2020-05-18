@@ -1,4 +1,4 @@
-class AddExpression extends BinaryExpression implements Expression 
+class AddExpression extends BinaryExpression
 {
    
 
